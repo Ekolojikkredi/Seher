@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Ekolojik Kredi" />
+            <h1>Ekolojik Kredi Sistemi</h1>
+        </div>
+    </header>
+
+    <main>
+        <section id="schoolRegistration">
+            <h2>Okul Kaydı</h2>
+            <form id="schoolForm">
+                <label for="schoolName">Okul Adı:</label>
+                <input type="text" id="schoolName" required><br>
+
+                <label for="schoolProvince">İl:</label>
+                <input type="text" id="schoolProvince" required><br>
+
+                <label for="schoolDistrict">İlçe:</label>
+                <input type="text" id="schoolDistrict" required><br>
+
+                <label for="schoolPassword">Okul Şifresi:</label>
+                <input type="password" id="schoolPassword" required><br>
+
+                <button type="button" onclick="registerSchool()">Okul Kaydını Yap</button>
+            </form>
+        </section>
+
+        <section id="studentRegistration">
+            <h2>Öğrenci Kaydı</h2>
+            <form id="studentForm">
+                <label for="studentName">Ad:</label>
+                <input type="text" id="studentName" required><br>
+
+                <label for="studentSurname">Soyad:</label>
+                <input type="text" id="studentSurname" required><br>
+
+                <label for="studentNumber">Öğrenci Numarası:</label>
+                <input type="text" id="studentNumber" required><br>
+
+                <label for="studentClass">Sınıf:</label>
+                <input type="text" id="studentClass" required><br>
+
+                <label for="studentEmail">E-posta:</label>
+                <input type="email" id="studentEmail" required><br>
+
+                <button type="button" onclick="registerStudent()">Öğrenci Kaydını Yap</button>
+            </form>
+        </section>
+
+        <section id="wasteEntry">
+            <h2>Atık Girişi</h2>
+            <form id="wasteForm">
+                <label for="wasteType">Atık Türü:</label>
+                <select id="wasteType" required>
+                    <option value="plastik">Plastik</option>
+                    <option value="cam">Cam</option>
+                    <option value="pil">Pil</option>
+                    <option value="elektronik">Elektronik</option>
+                    <option value="metal">Metal</option>
+                    <option value="kagit">Kağıt</option>
+                    <option value="yag">Yağ</option>
+                    <option value="tekstil">Tekstil</option>
+                </select><br>
+
+                <label for="wasteWeight">Atık Miktarı (kg):</label>
+                <input type="number" id="wasteWeight" required><br>
+
+                <label for="sortingStatus">Atık Durumu:</label>
+                <select id="sortingStatus" required>
+                    <option value="sorted">Ayrıştırıldı</option>
+                    <option value="unsorted">Ayrıştırılmadı</option>
+                </select><br>
+
+                <button type="button" onclick="submitWasteEntry()">Atık Girişi Yap</button>
+            </form>
+        </section>
+
+        <section id="viewData">
+            <h2>Öğrenci Verisi Görüntüle</h2>
+            <label for="studentNumberView">Öğrenci Numarası:</label>
+            <input type="text" id="studentNumberView" required><br>
+
+            <label for="studentEmailView">Öğrenci E-posta:</label>
+            <input type="email" id="studentEmailView" required><br>
+
+            <button type="button" onclick="viewStudentData()">Veriyi Görüntüle</button>
+
+            <div id="studentData"></div>
+        </section>
+
+        <section id="totalWasteSection">
+            <h2>Toplam Atık Miktarı</h2>
+            <p id="totalWasteCounter">0 kg</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Torbalı Anadolu Lisesi İzmir Torbalı | Ekolojik Kredi Sistemi</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
